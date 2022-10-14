@@ -1,0 +1,16 @@
+<header>
+  <div>
+    <%= image_tag "logo.png"%>
+  </div>
+  <ul>
+    <li>COURSES</li>
+    <li>PLANS</li>
+    <li>CONTACT US</li>
+  </ul>
+  <div class="login">
+    <% if current_user %>
+      <%= current_user %>
+    <% else %>
+      <%= link_to "LOGIN", new_user_session_path %> / <%= link_to "SIGN UP", new_user_registration_path %>
+    <% end %>
+</header>
