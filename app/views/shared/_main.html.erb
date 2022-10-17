@@ -1,0 +1,12 @@
+<main>
+  <div class="main-container">
+    <% @languages.each do |language| %>
+      <%= link_to language_path(language) do %>
+        <div class="grid-item">
+          <%= image_tag language.logo.variant(:standart) %>
+          <h2><%= language.name %></h2>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</main>

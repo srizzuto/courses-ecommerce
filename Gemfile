@@ -33,6 +33,9 @@ gem "redis", "~> 4.0"
 # Use Devise for session management
 gem "devise"
 
+# Use Pry for debugging
+gem "pry"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

@@ -1,0 +1,24 @@
+@import "colors"
+
+main
+  padding: 3em
+
+.main-container
+  display: grid
+  justify-content: center
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-auto-rows: auto
+  grid-gap: 2em
+  h2
+    margin-top: 1em
+  .grid-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 2em
+    border: 1px solid $color-ternary
+    &:hover
+      border: 1px solid $color-main
+      h2
+        color: $color-main
