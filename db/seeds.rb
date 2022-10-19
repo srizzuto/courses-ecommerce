@@ -17,3 +17,7 @@ python = Language.create(name: "Python")
 Language.last.logo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'python.png')), filename: "python.png")
 golang = Language.create(name: "Golang")
 Language.last.logo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'golang.png')), filename: "golang.png")
+
+Language.all.each do |language|
+  Course.create(name: "#{language.name} Basics", language_id: language.id, price: "$10")
+end

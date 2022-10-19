@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+<main>
+  <h1><%= @course.name %>: List of episodes</h1>
+  <% @episodes.all.each do |episode| %>
+    <ul>
+      <li><%=link_to episode.title, episode %></li>
+    </ul>
+  <% end %>
+</main>

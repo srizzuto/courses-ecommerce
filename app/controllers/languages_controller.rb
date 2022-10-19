@@ -2,7 +2,7 @@ class LanguagesController < ApplicationController
 
   def show
     @language = Language.find_by(id: params[:id])
-    @courses = Course.all.where(language_id: params[:language_id])
+    @courses = Course.all.where(language_id: @language.id)
   end
 
   private

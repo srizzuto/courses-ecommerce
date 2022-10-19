@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+<main>
+  <h1><%= @episode.title %></h1>
+    <ul>
+      <iframe src='https://www.youtube.com/embed/<%= @episode.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+    </ul>
+</main>

@@ -1,10 +1,20 @@
 <%= render "shared/header" %>
 <main>
   <h1> All <%= @language.name %> courses </h1>
-  <% @courses.each do |course| %>
-    <%= course.name %>
-    <%= course.price %>
-    
-  <% end %>
-
+  <table>
+    <tr>
+      <th><h2>Course</h2></th>
+      <th><h2>Price</h2></th>
+    </tr>
+    <tr>
+      <% @courses.each do |course| %>
+        <td>
+          <span><%= link_to course.name, course %></span>
+        </td>
+        <td>
+          <span><%= course.price %></span>
+        </td>
+      <% end %>
+    </tr>
+  </table>
 </main>

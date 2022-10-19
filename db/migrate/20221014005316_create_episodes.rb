@@ -3,7 +3,7 @@ class CreateEpisodes < ActiveRecord::Migration[7.0]
     create_table :episodes do |t|
       t.string :title
       t.references :course, null: false, foreign_key: true
-      t.integer :youtube_id
+      t.string :youtube_id
 
       t.timestamps
     end
